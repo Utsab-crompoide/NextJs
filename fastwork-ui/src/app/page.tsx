@@ -4,7 +4,11 @@ import CategoryCard from "@/components/CategoryCard";
 
 export default function Home() {
   return (
-    <div>
+    <div
+    style={{
+      background: 'linear-gradient(to right, #009245, #FCEE21)',
+    }}
+    >
       {/* Hero Section */}
      <TopSection></TopSection>
 
