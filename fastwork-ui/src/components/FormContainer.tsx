@@ -18,7 +18,7 @@ const FormContainer = ({ children, className = ' ' }: FormContainerProps): React
         <Header></Header>
       </div>
       <div className={`${className} container mx-auto px-4 sm:px-6 pb-24 h-full flex justify-center items-center`}>
-        <div className='bg-gray-100 px-4 sm:px-10 py-10 rounded-lg mt-32 my-2.5'>
+        <div className='bg-gray-100 px-4 sm:px-10 py-10 rounded-lg mt-20 my-2.5'>
           {children}
         </div>
       </div>
