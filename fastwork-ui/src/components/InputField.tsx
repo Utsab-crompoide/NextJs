@@ -1,4 +1,7 @@
 import React, { useState, ChangeEvent } from 'react'
+import Image from 'next/image'
+import eye from '@/../public/eye-on.svg'
+import eyeOff from '@/../public/eye-off.svg'
 import { Field, ErrorMessage, useFormikContext } from 'formik'
 
 interface InputFieldProps {
@@ -58,10 +61,11 @@ const InputField = ({
         />
         {type === 'password' && (
           <button
-            className='absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer'
+            className='absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer hover:bg-gray-200 rounded-r-md'
             onClick={() =>
               setShowPassword(!showPassword)}
           >
+            {showPassword ? <Image src={eye} alt='' /> : <Image src={eyeOff} alt='' />}
           </button>
         )}
       </div>

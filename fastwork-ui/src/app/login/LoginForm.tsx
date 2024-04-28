@@ -43,19 +43,18 @@ export const LoginForm = (): React.ReactNode => {
         <div className='mb-6'>
           <InputField label='Email Address' name='email' type='email' placeholder='Your Email' />
         </div>
-        <div className='mb-3'>
+        <div className='mb-6'>
           <InputField label='Password' name='password' type='password' placeholder='Your Password' />
         </div>
-        <div className='text-right mb-3'>
-          <Link className='inline-block text-black hover:text-blue-600 hover:underline pl-1 text-sm' href='/forgot-password'>Forgot your password?</Link>
-        </div>
-
         <Button type='submit' variant='btn-primary text-white w-full'>Login</Button>
-        <div className='mt-4 mx-9'>
+        <div className='text-center mb-4 mt-3'>
+          <Link className='inline-block text-black hover:text-green-600 hover:underline pl-1 text-sm' href='/forgot-password'>Forgot your password?</Link>
+        </div>
+        <div className='mt-4 mx-9 text-black'>
           New to website?
           <Link
             href='/register'
-            className='text-blue-600 hover:text-blue-800 hover:underline pl-1'
+            className='text-green-600 hover:text-green-800 underline pl-2'
           >
             Create a new account
           </Link>
