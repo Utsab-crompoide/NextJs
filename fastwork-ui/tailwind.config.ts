@@ -6,7 +6,7 @@ const daisyui: DaisyuiConfig = {
   themes: [
     {
       laconic: {
-        primary: '#38A169',
+        primary: '#83CCFF',
         secondary: '#E8E8E8',
         accent: '#c1cef9',
         neutral: '#070403',
