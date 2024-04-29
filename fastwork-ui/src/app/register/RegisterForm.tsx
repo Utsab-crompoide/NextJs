@@ -96,7 +96,7 @@ export const RegisterForm = (): React.ReactNode => {
         Already have an account ?
         <Link
           href='/login'
-          className='text-green-600 hover:text-green-800 hover:underline ml-2'
+          className='text-blue-400 hover:text-blue-500 hover:underline ml-2'
         >
           Login
         </Link>
