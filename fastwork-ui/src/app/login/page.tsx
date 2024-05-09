@@ -8,7 +8,7 @@ export default function LoginPage (): React.ReactNode {
     className='flex flex-col min-h-screen w-full'
     >
       <NavBar showOnlyLogo></NavBar>
-      <FormContainer className='pt-20'>
+      <FormContainer className='pt-20' >
         <LoginForm />
       </FormContainer>
     </div>

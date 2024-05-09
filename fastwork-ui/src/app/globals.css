@@ -31,3 +31,36 @@ body {
     text-wrap: balance;
   }
 }
+
+.job-div {
+  display: flex;
+  flex-direction: column; 
+  align-items: self-end;
+  width: 70%;
+}
+
+.job-card {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f6f5f5; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.job-category {
+  width: 18%;
+  background-color: #f6f5f5; 
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 4%;
+}
