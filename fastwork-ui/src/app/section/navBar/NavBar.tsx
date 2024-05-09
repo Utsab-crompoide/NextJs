@@ -41,6 +41,11 @@ const Navbar = ({ showOnlyLogo = false }: NavBarProps) => {
                             <p>Contacts</p>
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/chat">
+                            <p>Chat</p>
+                        </Link>
+                    </li>
                 </ul>
           </div>}
         </div>
