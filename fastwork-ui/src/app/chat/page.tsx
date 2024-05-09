@@ -13,13 +13,7 @@ const Home = () => {
       sender: 'John',
       avatar: '/avatar.svg',
       text: 'Hey there!',
-    },
-    {
-      id: 2,
-      sender: 'Jane',
-      avatar: '/avatar.svg',
-      text: 'Hi John!',
-    },
+    }
   ]);
 
   const handleMessageSubmit = () => {
@@ -43,9 +37,9 @@ const Home = () => {
       }}
     >
     <NavBar showOnlyLogo />
-      <FormContainer>
+      <FormContainer className='ml-36'>
         <div className="mx-auto mt-6 bg-blue-50 rounded-lg h-80 w-full">
-          <h1 className="text-xl font-bold mb-4">Chat Room</h1>
+          <h1 className="text-xl font-bold mb-4 text-center">Chat Room</h1>
             {messages.map((message) => (
               <ChatMessage key={message.id} message={message} />
             ))}

@@ -50,7 +50,7 @@ export const LoginForm = (): React.ReactNode => {
         <div className='text-center mb-4 mt-3'>
           <Link className='inline-block text-black hover:text-blue-400 hover:underline pl-1 text-sm' href='/forgot-password'>Forgot your password?</Link>
         </div>
-        <div className='mt-4 mx-9 text-black'>
+        <div className='mt-4 text-center text-black'>
           New to website?
           <Link
             href='/register'
