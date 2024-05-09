@@ -14,7 +14,7 @@ const daisyui: DaisyuiConfig = {
         success: '#00823D',
         warning: '#F07129',
         error: '#EB2121',
-        background: 'linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%)'
+        // background: 'linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%)'
       }
     }
   ]

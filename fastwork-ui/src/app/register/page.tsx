@@ -7,7 +7,7 @@ const RegisterPage = (): React.ReactNode => {
   return (
     <div className='min-h-screen w-full'>
       <NavBar showOnlyLogo></NavBar>
-      <FormContainer>
+      <FormContainer className='mx-auto'>
         <RegisterForm />
       </FormContainer>
     </div>
