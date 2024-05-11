@@ -14,7 +14,7 @@ const Navbar = ({ showOnlyLogo = false }: NavBarProps) => {
         window.location.href = '/'
     }
   return (
-      <section className="w-full h-16 sticky"
+      <section className="w-full h-16 sticky top-0 z-50"
       style={{
         background: 'linear-gradient( 89.5deg, rgba(131,204,255,1) 0.4%, rgba(66,144,251,1) 100.3% )',
       }}
