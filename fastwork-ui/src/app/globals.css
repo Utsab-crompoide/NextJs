@@ -33,7 +33,6 @@ body {
 }
 
 .job-div {
-  display: flex;
   flex-direction: column; 
   align-items: self-end;
   width: 70%;
@@ -53,6 +52,16 @@ body {
   margin-bottom: 20px;
   color: black;
 }
+
+.job-card:hover h2 {
+  color: #2c96ec; /* Blue-400 */
+  text-decoration: underline;
+}
+
+.job-card:hover Image {
+  filter: none;
+}
+
 
 .job-category {
   width: 18%;

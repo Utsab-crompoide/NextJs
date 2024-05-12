@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, ChangeEvent } from 'react'
 import Image from 'next/image'
 import eye from '@/../public/eye-on.svg'
@@ -5,6 +6,7 @@ import eyeOff from '@/../public/eye-off.svg'
 import { Field, ErrorMessage, useFormikContext } from 'formik'
 
 interface InputFieldProps {
+  as?: string
   label?: string
   name: string
   type?: string
@@ -16,6 +18,7 @@ interface InputFieldProps {
 }
 
 const InputField = ({
+  as,
   label,
   name,
   type = 'text',
@@ -48,6 +51,7 @@ const InputField = ({
       </label>
       <div className='relative'>
         <Field
+          as={as}
           disabled={isDisabled}
           type={showPassword ? 'text' : type}
           id={name} name={name} value={formik.values[name] || value || ''}

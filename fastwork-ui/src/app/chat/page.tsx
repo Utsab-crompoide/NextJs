@@ -68,7 +68,7 @@ const Home = () => {
       <NavBar showOnlyLogo />
       <div className="flex flex-grow" style={{ background: 'linear-gradient( 89.5deg, rgba(66,144,251,1) 0.4%, rgba(131,204,255,1) 100.3% )' }}>
         <div className="flex w-full lg:w-1/4">
-          <div className="w-full bg-gray-200 p-4">
+          <div className="w-full p-4">
             <div className="text-lg font-semibold mb-4">
               Peoples
               <div className="w-full h-0.5 mt-2 bg-gray-300"></div>

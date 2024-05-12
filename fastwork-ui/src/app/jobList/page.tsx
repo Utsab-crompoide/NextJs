@@ -1,4 +1,4 @@
-
+'use client'
 import SearchBar from '../section/SearchBar';
 import NavBar from '../section/navBar/NavBar'
 import JobCard from '@/components/JobCard'
@@ -17,7 +17,7 @@ export default function JobPage (): React.ReactNode {
     const jobDataList = [ // Sample list of job data
     {
       title: 'Software Engineer',
-      company: 'ABC Tech',
+      company: 'ABC Technologies',
       location: 'New York',
       type: 'Full-time',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -25,7 +25,7 @@ export default function JobPage (): React.ReactNode {
     },
     {
       title: 'Data Scientist',
-      company: 'XYZ Corp',
+      company: 'XYZ Brothers Ultimate Corporation',
       location: 'San Francisco',
       type: 'Remote',
       description: 'Pellentesque nec neque eu quam tempus ultrices.',
@@ -34,15 +34,12 @@ export default function JobPage (): React.ReactNode {
   ];
     
   return (
-    <div 
-    className='flex flex-col min-h-screen w-full'
-    style={{
-        background: 'linear-gradient( 89.5deg,  rgba(66,144,251,1) 0.4%, rgba(131,204,255,1) 100.3% )',
-      }}
-    >
+    <div className='flex flex-col min-h-screen w-full bg-gray-200'>
       <NavBar showOnlyLogo></NavBar>
-     <SearchBar></SearchBar>
-      <div className="flex">
+     <SearchBar style={{
+        background: 'linear-gradient( 89.5deg,  rgba(66,144,251,1) 0.4%, rgba(131,204,255,1) 100.3% )',
+      }}></SearchBar>
+      <div className="flex flex-grow">
         <div className="job-category">
           <h2 className='font-semibold text-center'>Work Category</h2>
           {categories.map((category, index) => (
