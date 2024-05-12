@@ -1,6 +1,8 @@
 'use client'
 
 import React from "react";
+import Image from 'next/image'
+import location from "@/../public/location-pin.svg"
 
 interface Job {
   title: string;
@@ -16,13 +18,24 @@ interface JobCardProps {
 }
 
 const JobCard = ({jobs}: JobCardProps): React.ReactElement => {
+  const handleJobClick = () => {
+    console.log('Job card clicked');
+    window.location.href = '/description'
+  }
+
 return(
-    <div className="job-div">
+  <div className="job-div">
+      <h2 className='font-bold text-xl m-4'> All Jobs</h2>
         {jobs?.map((job, index) => (
-                <div key={index} className="job-card">
+                <div key={index} className="job-card" onClick={handleJobClick}>
                     <h2 className="text-lg font-bold">{job.title}</h2>
-                    <p className="job-company">{job.company}</p>
-                    <p className="job-location">{job.location}</p>
+                    <div className="flex flex-row justify-between">
+                    <p className="font-semibold">{job.company}</p>
+                    <div className="flex flex-row">
+                    <Image className="w-5 h-5" src={location} alt='' style={{ filter: 'grayscale(100%)' }}/> 
+                    <p className="text-sm">{job.location}</p>
+                    </div>
+                    </div>
                     <p className="job-type">{job.type}</p>
                     <p className="job-description">{job.description}</p>
                     <p className="job-requirements">{job.requirements}</p>
