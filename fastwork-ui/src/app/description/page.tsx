@@ -7,7 +7,7 @@ export default function LoginPage (): React.ReactNode {
     <div 
     className='flex flex-col min-h-screen w-full'
     >
-      <NavBar showOnlyLogo></NavBar>
+      <NavBar></NavBar>
       <JobDescription></JobDescription>
     </div>
   )

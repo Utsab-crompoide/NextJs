@@ -1,10 +1,9 @@
-'use client'
+import React from 'react';
 import SearchBar from '../section/SearchBar';
-import NavBar from '../section/navBar/NavBar'
-import JobCard from '@/components/JobCard'
+import NavBar from '../section/navBar/NavBar';
+import JobCard from '@/components/JobCard';
 
-export default function JobPage (): React.ReactNode {
-
+export default function JobPage(): React.ReactNode {
   const categories = [
     "Development and IT",
     "AI Services",
@@ -14,40 +13,58 @@ export default function JobPage (): React.ReactNode {
     "Write and Translate"
   ];
 
-    const jobDataList = [ // Sample list of job data
+  const jobDataList = [
     {
       title: 'Software Engineer',
       company: 'ABC Technologies',
       location: 'New York',
-      type: 'Full-time',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      requirements: 'Minimum 3 years of experience in software development.'
+      type: 'Remote',
+      time: 'Flexible',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minimum 3 years of experience in software development. Proficiency in Python, R, and machine learning algorithms.',
     },
     {
       title: 'Data Scientist',
       company: 'XYZ Brothers Ultimate Corporation',
       location: 'San Francisco',
+      type: 'Office',
+      time: 'FullTime',
+      description: 'Pellentesque nec neque eu quam tempus ultrices. Proficiency in Python, R, and machine learning algorithms. Minimum 3 years of experience in software development.'
+    },
+    {
+      title: 'AI Scientist',
+      company: 'ABC Brothers Corporation',
+      location: 'Kathmandu',
       type: 'Remote',
+      time: 'PartTime',
+      description: 'Pellentesque nec neque eu quam tempus ultrices. Proficiency in Python, R, and machine learning algorithms.',
+    },
+    {
+      title: 'Content Writer',
+      company: 'KGF Publishing',
+      location: 'Pokhara',
+      type: 'Remote',
+      time: 'Flexible',
       description: 'Pellentesque nec neque eu quam tempus ultrices.',
-      requirements: 'Proficiency in Python, R, and machine learning algorithms.'
     },
   ];
-    
+
   return (
-    <div className='flex flex-col min-h-screen w-full bg-gray-200'>
-      <NavBar showOnlyLogo></NavBar>
-     <SearchBar style={{
+    <div className='bg-gray-200'>
+      <NavBar/>
+      <SearchBar style={{
         background: 'linear-gradient( 89.5deg,  rgba(66,144,251,1) 0.4%, rgba(131,204,255,1) 100.3% )',
-      }}></SearchBar>
-      <div className="flex flex-grow">
-        <div className="job-category">
+      }} />
+      <div className='flex justify-between'>
+        <div className="job-category overflow-y-auto">
           <h2 className='font-semibold text-center'>Work Category</h2>
           {categories.map((category, index) => (
-            <div key={index} className="py-2 border-b border-gray-400">{category}</div>
+            <div key={index} className="py-2 border-b border-gray-400 hover:text-blue-500 cursor-pointer">{category}</div>
           ))}
         </div>
+        <div className="flex-grow overflow-y-auto">
           <JobCard jobs={jobDataList} />
+        </div>
       </div>
     </div>
-  )
+  );
 }

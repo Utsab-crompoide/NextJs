@@ -4,6 +4,7 @@ import InputField from "@/components/InputField"
 import React from "react"
 import Form from "./Form"
 import * as Yup from "yup"
+import { Field } from "formik"
 
 interface FormValues {
     email: string
@@ -30,7 +31,6 @@ const JobDescription = (): React.ReactElement => {
   ): Promise<void>  => {
         console.log('Form submitted:', values)
       }
-    
 
   return (
     <>
@@ -92,13 +92,19 @@ const JobDescription = (): React.ReactElement => {
               <div>
                 <InputField name="email" label="Email" placeholder="Enter your email" type="email" />
               </div>
-              <div>
-                <InputField name="resume" label="Resume" placeholder="Upload your resume" type="file" />
+                <div className="flex items-center space-x-4 h-16">
+                <label htmlFor="resume" className="text-gray-700">Resume:</label>
+                <input
+                  type="file"
+                  id="resume"
+                  accept=".pdf,.doc,.docx"
+                  className="block text-sm text-gray-900 bg-blue-200 rounded-lg border border-gray-300 cursor-pointer focus:outline-none p-2"
+                />
               </div>
               <div>
                 <InputField as="textarea" className="min-h-[150px] w-full" name="coverLetter" label="Cover Letter" placeholder="Write your cover letter" />
               </div>
-              <Button size="lg" type="submit" variant="btn-primary">
+              <Button size="lg" type="submit" variant="btn-primary w-full">
                 Submit Application
               </Button>
             </Form>
