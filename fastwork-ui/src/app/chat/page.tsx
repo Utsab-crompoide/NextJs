@@ -68,13 +68,13 @@ const Home = () => {
       <NavBar showOnlyLogo />
       <div className="flex flex-grow" style={{ background: 'linear-gradient( 89.5deg, rgba(66,144,251,1) 0.4%, rgba(131,204,255,1) 100.3% )' }}>
         <div className="flex w-full lg:w-1/4">
-          <div className="w-full p-4">
-            <div className="text-lg font-semibold mb-4">
+          <div className="w-full pl-4 pt-2">
+            <div className="text-lg font-semibold mb-4 text-center">
               Peoples
-              <div className="w-full h-0.5 mt-2 bg-gray-300"></div>
+              <div className="w-full h-0.5 mt-3 bg-gray-300"></div>
             </div>
             {peoples.map((people) => (
-              <div className="overflow-y-auto flex mb-4" key={people.id}>
+              <div className="overflow-y-auto flex p-2 hover:bg-blue-400 rounded-md" key={people.id}>
                 <img className="w-10 h-10 rounded-full mr-4" src={people.avatar} alt={people.name} />
                 <div className="text-black mt-2">{people.name}</div>
               </div>
@@ -84,7 +84,7 @@ const Home = () => {
 
         <div className="flex w-full lg:w-3/4">
           <div className="w-full mx-auto bg-blue-50">
-            <div className="text-xl font-bold mb-4 text-center mt-5">
+            <div className="text-xl font-bold mb-4 text-center mt-4">
               Messages
               <div className="w-full h-0.5 mt-1 bg-gray-300 m-2"></div>
             </div>
